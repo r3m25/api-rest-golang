@@ -36,12 +36,12 @@ func Connection() *mongo.Client {
     return client
 }
 
-// connectionIsSuccess method
-func connectionIsSuccess() int {
+// ConnectionIsSuccess method
+func ConnectionIsSuccess() bool {
     err := connection.Ping(context.TODO(), nil)
     if err!= nil {
         log.Fatal(err)
-        return 0
+        return false
     }
-    return 1
+    return true
 }
