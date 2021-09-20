@@ -8,8 +8,8 @@ import (
     "go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var user = "r3m20-user"
-var password = "Arq2010rub"
+var user = ""
+var password = ""
 
 //connection var as object
 var connection = Connection()
