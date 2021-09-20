@@ -1,16 +1,19 @@
 package handlers
 
-import(
+import (
+	"github.com/gorilla/mux"
+	"github.com/r3m25/api-rest-golang/middlew"
 	"github.com/rs/cors"
 	"log"
 	"net/http"
 	"os"
-	"github.com/gorilla/mux"
 )
 
 //Handlers to set port, listen server
 func Handlers() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/register", middlew.CheckBd(nil)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {

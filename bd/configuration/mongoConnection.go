@@ -1,4 +1,4 @@
-package bd
+package configuration
 
 import (
     "context"
@@ -8,8 +8,8 @@ import (
     "go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var user = ""
-var password = ""
+var user = "r3m20-user"
+var password = "Arq2010rub"
 
 //connection var as object
 var connection = Connection()
